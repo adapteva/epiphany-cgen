@@ -580,6 +580,7 @@
 	   (ctimer0        14)
 	   (ctimer1        15)
 	   (fstatus        16)
+	   (debugcmd       17)
 	   )
   )
 ;; DMA registers in group MR0=1, MR1=0
