@@ -646,6 +646,9 @@
    (coreid    1)
    (multicast 2)
    (resetcore   3)
+   (cmeshroute  4)
+   (xmeshroute  5)
+   (rmeshroute  6)
    )
   )
 
