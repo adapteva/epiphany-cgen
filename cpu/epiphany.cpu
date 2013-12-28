@@ -643,7 +643,7 @@
 
    (meshconfig    0)
    (coreid    1)
-   (meshmulticast 2)
+   (multicast 2)
    (swreset   3)
    )
   )
