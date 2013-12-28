@@ -644,7 +644,7 @@
    (meshconfig    0)
    (coreid    1)
    (multicast 2)
-   (swreset   3)
+   (resetcore   3)
    )
   )
 
