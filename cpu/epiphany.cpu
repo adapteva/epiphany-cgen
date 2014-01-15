@@ -567,7 +567,6 @@
 	   (status         1) ; unified condition codes
 	   (pc             2) ; virtualized PC
 	   (debugstatus    3);
-	   (iab            4)
 	   (lc             5);loop counter            Not impemented
 	   (ls             6);loop start address      Not impemented
 	   (le             7);loop end address        Not impemented
