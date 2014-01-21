@@ -1,3 +1,9 @@
+2013-12-28  Alex Rønne Petersen <alex@lycus.org>
+
+    * epiphany.cpu: Added missing system registers.  Renamed
+    some system registers to match the architecture manual.
+    Removed implementation-specific registers.
+
 2011-12-15  Nick Clifton  <nickc@redhat.com>
 
 	* frv.opc (parse_uhi16): Fix handling of %hi operator on 64-bit
