@@ -1,0 +1,3 @@
+2014-06-13  Pierre Langlois  <pierre.langlois@embecosm.com>
+
+	* epiphany-opc (parse_imm16): Accept @PLT instead of overhigh/overlow.
