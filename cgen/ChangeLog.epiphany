@@ -1,3 +1,9 @@
 2014-06-13  Pierre Langlois  <pierre.langlois@embecosm.com>
 
+	* epiphany.opc (parse_imm16): Rename BFD_RELOC_EPIPHANY_OVERLOW to
+	BFD_RELOC_EPIPHANY_CACHELOW.  Rename BFD_RELOC_EPIPHANY_OVERHIGH to
+	BFD_RELOC_EPIPHANY_CACHEHIGH.
+
+2014-06-13  Pierre Langlois  <pierre.langlois@embecosm.com>
+
 	* epiphany-opc (parse_imm16): Accept @PLT instead of overhigh/overlow.
