@@ -1,3 +1,7 @@
+2015-08-29  Ola Jeppsson  <ola@adapteva.com>
+
+	* epiphany.cpu: Move fp alias back to r15.
+
 2014-06-13  Pierre Langlois  <pierre.langlois@embecosm.com>
 
 	* epiphany.opc (parse_imm16): Rename BFD_RELOC_EPIPHANY_OVERLOW to
