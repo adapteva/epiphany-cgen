@@ -1,3 +1,10 @@
+2015-09-03  Ola Jeppsson  <ola@adapteva.com>
+
+	* sim-cpu.scm: Rename TRACE_RESULT to CGEN_TRACE_RESULT. Rename
+	TRACE_EXTRACT to CGEN_TRACE_EXTRACT.
+	* sim-decode.scm: Likewise.
+	* sim.scm: Likewise.
+
 2014-06-13  Pierre Langlois  <pierre.langlois@embecosm.com>
 
 	* epiphany.opc (parse_imm16): Rename BFD_RELOC_EPIPHANY_OVERLOW to

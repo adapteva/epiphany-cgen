@@ -1260,12 +1260,12 @@
        (send (op:type op) 'gen-set-quiet estate mode index selector
 	     (cx:make-with-atlist mode "opval" (cx:atlist newval))))
    (/op-gen-written-update op)
-; TRACE_RESULT_<MODE> (cpu, abuf, hwnum, opnum, value);
+; CGEN_TRACE_RESULT_<MODE> (cpu, abuf, hwnum, opnum, value);
 ; For each insn record array of operand numbers [or indices into
 ; operand instance table].
 ; Could just scan the operand table for the operand or hardware number,
 ; assuming the operand number is stored in `op'.
-   "    TRACE_RESULT (current_cpu, abuf"
+   "    CGEN_TRACE_RESULT (current_cpu, abuf"
    ", " (send op 'gen-pretty-name mode)
    ", " (mode:printf-type mode)
    ", opval);\n"
@@ -1287,12 +1287,12 @@
 	"    " /par-operand-macro " (" (gen-sym op) ")"
 	" = opval;\n"))
    (/op-gen-written-update op)
-; TRACE_RESULT_<MODE> (cpu, abuf, hwnum, opnum, value);
+; CGEN_TRACE_RESULT_<MODE> (cpu, abuf, hwnum, opnum, value);
 ; For each insn record array of operand numbers [or indices into
 ; operand instance table].
 ; Could just scan the operand table for the operand or hardware number,
 ; assuming the operand number is stored in `op'.
-   "    TRACE_RESULT (current_cpu, abuf"
+   "    CGEN_TRACE_RESULT (current_cpu, abuf"
    ", " (send op 'gen-pretty-name mode)
    ", " (mode:printf-type mode)
    ", opval);\n"
@@ -1323,7 +1323,7 @@
 	    (/op-gen-set-quiet self estate mode index selector newval)))))
 )
 
-; Return C code to set the value of an operand and print TRACE_RESULT message.
+; Return C code to set the value of an operand and print CGEN_TRACE_RESULT message.
 ; NEWVAL is a <c-expr> object of the value to store.
 ; If INDEX is non-#f use it, otherwise use (op:index self).
 ; This special handling of #f for INDEX is *only* supported for operands
