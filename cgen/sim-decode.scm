@@ -241,7 +241,7 @@ void
 )
 
 ; gen-trace-extract method.
-; Return appropriate arguments for CGEN_TRACE_EXTRACT.
+; Return appropriate arguments for TRACE_EXTRACT.
 
 (method-make!
  <hardware-base> 'gen-trace-extract
@@ -266,7 +266,7 @@ void
        ""))
 )
 
-; Return appropriate arguments for CGEN_TRACE_EXTRACT.
+; Return appropriate arguments for TRACE_EXTRACT.
 
 (method-make!
  <hw-register> 'gen-trace-extract
@@ -294,7 +294,7 @@ void
 		  ";\n"))
 )
 
-; Return appropriate arguments for CGEN_TRACE_EXTRACT.
+; Return appropriate arguments for TRACE_EXTRACT.
 
 (method-make!
  <hw-address> 'gen-trace-extract
@@ -320,7 +320,7 @@ void
   (send (op:type op) 'gen-extract op sfmt local?)
 )
 
-; Return three of arguments to CGEN_TRACE_EXTRACT:
+; Return three of arguments to TRACE_EXTRACT:
 ; string argument to fprintf, character indicating type of third arg, value.
 ; The type is one of: x.
 
@@ -374,7 +374,7 @@ void
 		      iflds)
      (string-list-map (lambda (op) (/gen-op-extract op sfmt #f))
 		      operands)
-     "  CGEN_TRACE_EXTRACT (current_cpu, abuf, (current_cpu, pc, "
+     "  TRACE_EXTRACT (current_cpu, abuf, (current_cpu, pc, "
      "\"" (gen-sym sfmt) "\""
      (string-list-map (lambda (f) (/gen-trace-argbuf-ifld f sfmt))
 		      iflds)

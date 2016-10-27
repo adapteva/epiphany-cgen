@@ -1260,7 +1260,7 @@
        (send (op:type op) 'gen-set-quiet estate mode index selector
 	     (cx:make-with-atlist mode "opval" (cx:atlist newval))))
    (/op-gen-written-update op)
-; CGEN_TRACE_RESULT_<MODE> (cpu, abuf, hwnum, opnum, value);
+; TRACE_RESULT_<MODE> (cpu, abuf, hwnum, opnum, value);
 ; For each insn record array of operand numbers [or indices into
 ; operand instance table].
 ; Could just scan the operand table for the operand or hardware number,
@@ -1287,7 +1287,7 @@
 	"    " /par-operand-macro " (" (gen-sym op) ")"
 	" = opval;\n"))
    (/op-gen-written-update op)
-; CGEN_TRACE_RESULT_<MODE> (cpu, abuf, hwnum, opnum, value);
+; TRACE_RESULT_<MODE> (cpu, abuf, hwnum, opnum, value);
 ; For each insn record array of operand numbers [or indices into
 ; operand instance table].
 ; Could just scan the operand table for the operand or hardware number,
@@ -1323,7 +1323,7 @@
 	    (/op-gen-set-quiet self estate mode index selector newval)))))
 )
 
-; Return C code to set the value of an operand and print CGEN_TRACE_RESULT message.
+; Return C code to set the value of an operand and print TRACE_RESULT message.
 ; NEWVAL is a <c-expr> object of the value to store.
 ; If INDEX is non-#f use it, otherwise use (op:index self).
 ; This special handling of #f for INDEX is *only* supported for operands
@@ -1464,7 +1464,7 @@
   (string-append
    (string-map (lambda (mach)
 		 (gen-obj-sanitize mach
-				   (string-append "extern const MACH "
+				   (string-append "extern const SIM_MACH "
 						  (gen-sym mach)
 						  "_mach;\n")))
 	       (current-mach-list))
@@ -1475,7 +1475,7 @@
 
 (define (/gen-mach-data)
   (string-append
-   "const MACH *sim_machs[] =\n{\n"
+   "const SIM_MACH *sim_machs[] =\n{\n"
    (string-map (lambda (mach)
 		 (gen-obj-sanitize
 		  mach
