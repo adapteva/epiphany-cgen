@@ -1,3 +1,39 @@
+2019-01-01  Alan Modra  <amodra@gmail.com>
+
+	* utils.scm: Update emitted copyright dates.
+
+2018-11-20  Jose E. Marchesi  <jose.marchesi@oracle.com>
+
+	* doc/running.texi (Set up the arguments for cgen): Raised from a
+	subsection to a section.
+
+2018-03-03  Alan Modra  <amodra@gmail.com>
+
+	* desc-cpu.scm (opcodes_error_handler): Define.
+	(@arch@_cgen_rebuild_tables): Use opcodes_error_handler.
+	(@arch@_cgen_cpu_open): Likewise.
+	* opc-asmdis.scm (@arch@_cgen_parse_operand): Likewise.
+	(@arch@_cgen_print_operand): Likewise.
+	* opc-ibld.scm (@arch@_cgen_get_int_operand): Likewise.
+	(@arch@_cgen_get_vma_operand): Likewise.
+	(@arch@_cgen_set_int_operand): Likewise.
+	(@arch@_cgen_set_vma_operand): Likewise.
+	(@arch@_cgen_insert_operand): Likewise.
+	(@arch@_cgen_extract_operand): Likewise.
+	* utils.scm: Update emitted copyright dates.
+
+2017-04-13  Alan Modra  <amodra@gmail.com>
+
+	PR 20946
+	* desc-cpu.scm (lookup_mach_via_bfd_name): Return NULL if the name
+	could not be matched.
+	(@arch@_cgen_cpu_open): Allow for lookup_mach_via_bfd_name returning
+	NULL.
+
+2017-04-08  Alan Modra  <amodra@gmail.com>
+
+	* utils.scm: Update emitted copyright dates.
+
 2016-07-18  Trevor Saunders <tbsaunde@tbsaunde.org>
 
 	* desc-cpu.scm, opc-itab.sbm: Emit extern "C" { ... } wrappers to
@@ -8584,7 +8620,7 @@ Tue Jul 21 10:51:42 1998  Doug Evans  <devans@seba.cygnus.com>
 	* Version 0.6.0.
 	Clean up pass over everything, so starting fresh.
 
-Copyright (C) 1998-2012 Free Software Foundation, Inc.
+Copyright (C) 1998-2017 Free Software Foundation, Inc.
 
 Copying and distribution of this file, with or without modification,
 are permitted in any medium without royalty provided the copyright
